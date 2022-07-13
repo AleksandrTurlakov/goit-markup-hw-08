@@ -1,0 +1,13 @@
+.logo {
+  font-family: 'Raleway';
+  @include font(700, 24px, 1.17, 0.03em);
+  @include desktop {
+    @include font(700, 26px, 1.19, 0.03em);
+  }
+}
+.logo__web--color--blue {
+  color: var(--header-text-color);
+}
+.logo__studio--color--white {
+  color: var(--hero-text-color);
+}

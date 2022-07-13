@@ -1,0 +1,15 @@
+.works-title,
+.team-title,
+.clients-title {
+  text-align: center;
+  color: var(--primary-text-color);
+
+  margin-bottom: 30px;
+
+  @include font(700, 28px, 1.18, 0.03em);
+  @include desktop {
+    margin-bottom: 50px;
+
+    @include font(null, 36px, 1.17, null);
+  }
+}

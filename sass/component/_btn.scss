@@ -1,0 +1,13 @@
+.btn {
+  border: transparent;
+  border-radius: 4px;
+
+  font-family: inherit;
+  @include font(700, 16px, 1.88, 0.06em);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  color: var(--hero-text-color);
+  background-color: var(--btn-background-color);
+}

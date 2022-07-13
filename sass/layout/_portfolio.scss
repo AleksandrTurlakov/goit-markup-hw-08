@@ -1,0 +1,142 @@
+.portfolio {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  @include tablet {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+}
+
+.container__filter {
+  margin-bottom: 40px;
+  @include tablet {
+    margin-bottom: 30px;
+  }
+  @include desktop {
+    margin-bottom: 50px;
+  }
+}
+
+.filter__item:not(:last-child) {
+  margin-right: 8px;
+  margin-bottom: 15px;
+  @include tablet {
+    margin-bottom: 0;
+  }
+}
+
+.filter__btn {
+  padding: 6px 22px;
+
+  @include font(500, null, 1.63, 0.03em);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    color: var(--hero-text-color);
+    background-color: var(--btn-background-color);
+  }
+}
+
+.filter__btn--color-bgc-transition {
+  color: var(--primary-text-color);
+  background-color: var(--secondary-background-color);
+  transition: color 250ms var(--cubic), background-color 250ms var(--cubic),
+    box-shadow 250ms var(--cubic);
+}
+
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.project__item {
+  width: 100%;
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 60px) / 3);
+  }
+}
+
+.name {
+  padding: 20px 24px;
+  flex-grow: 1;
+}
+.name--marks-border {
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
+
+.name__title {
+  margin-bottom: 4px;
+
+  @include font(700, 18px, 2, 0.06em);
+}
+
+.name__title--color--change {
+  color: var(--primary-text-color);
+}
+
+.name__text {
+  @include font(null, 16px, 1.88, 0.03em);
+}
+
+.name__text--color--change {
+  color: var(--secondary-text-color);
+}
+
+.item__link {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.item__link--shadow--transition {
+  transition: box-shadow 250ms var(--cubic);
+}
+
+.group {
+  position: relative;
+  overflow: hidden;
+}
+
+.group__text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 64px 24px;
+
+  @include font(null, 18px, 1.56, 0.03em);
+
+  .item__link:hover & {
+    transform: translateY(0);
+  }
+}
+
+.group__text--transformation {
+  color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms var(--cubic);
+}
